@@ -100,8 +100,18 @@ array = ["joanie", "annamarie", "muriel", "drew", "reva", "belle", "amari", "aid
 # Write Ruby code to find out the answers to the following questions:
 
 # * How would you print out each name backwards in `array`?
+array.each do |word|
+    puts word.reverse
+end
 # * What are the total number of characters in the names in `array`?
+
+puts array.join.size
+
 # * How many names in `array` are less than 5 characters long?
+i = 0
+array.each {|word| i += 1 if word.size < 5}
+puts i
+
 # * How many names in `array` end in a vowel?
 # * How many names in `array` are more than 5 characters long?
 # * How many names in `array` are exactly 5 characters in length?
