@@ -1,3 +1,4 @@
+require 'pry'
 #  Write Ruby<->English answers here as comments in your code
 
 # 1)
@@ -113,5 +114,18 @@ array.each {|word| i += 1 if word.size < 5}
 puts i
 
 # * How many names in `array` end in a vowel?
+i = 0
+array.each do |word|
+    if ['o','i','e','a','u','y'].include?(word[-1])
+        i += 1
+    end
+end
+puts i
 # * How many names in `array` are more than 5 characters long?
+i = 0
+array.each {|word| i += 1 if word.size > 5}
+puts i
 # * How many names in `array` are exactly 5 characters in length?
+i = 0
+array.each {|word| i += 1 if word.size == 5}
+puts i
